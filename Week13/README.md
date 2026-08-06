@@ -1,4 +1,4 @@
-# Week 15 – System Administration Lab
+# Week 13 – System Administration Lab
 
 ## Student Information
 * **Name:** Keith Francis C. San Jose
@@ -9,7 +9,7 @@
 ---
 
 # Objectives
-1. Perform system administration laboratory exercises for Week 15.
+1. Perform system administration laboratory exercises for Week 13.
 2. Document environment configurations and step-by-step procedures.
 
 ---
@@ -21,10 +21,10 @@
 ---
 
 # Screenshots
-![Week 15 Proof](screenshot/.gitkeep)
+![Week 13 Proof](screenshot/.gitkeep)
 
 ---
 
 # Challenges & Solutions
 * **Issue:** Pending lab configuration.
-* **Fix:** Will update documentation upon completing Week 15 activity.
+* **Fix:** Will update documentation upon completing Week 13 activity.
