@@ -1,2 +1,0 @@
-# BSIT-SystemAdministration-Portfolio
-
