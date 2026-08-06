@@ -73,3 +73,22 @@
 ### 3. Git Attributes Line Ending Warnings
 * **Problem:** Received normalization warnings regarding LF/CRLF text file line endings when tracking `.gitattributes` and `.gitkeep` files across environments.
 * **Solution:** Configured global Git line-ending settings (`git config --global core.autocrlf true`) to handle Windows/Linux carriage returns consistently.
+
+Here is the reference for the Windows 11 IoT Enterprise LTSC evaluation portal to add to your documentation list:
+
+* **Microsoft Windows 11 IoT Enterprise LTSC Evaluation:** [Microsoft Evaluation Center - Windows 11 IoT Enterprise LTSC](https://www.microsoft.com/en-us/evalcenter/download-windows-11-iot-enterprise-ltsc-eval)
+
+---
+
+### 🛠️ **Core Tools & Platforms**
+
+* **Git:** [Git Official Documentation](https://git-scm.com/docs)
+* **GitHub & GitHub Desktop:** [GitHub Docs](https://docs.github.com) & [GitHub Desktop Documentation](https://docs.github.com/en/desktop)
+* **Visual Studio Code:** [VS Code Documentation](https://code.visualstudio.com/docs)
+
+### 💻 **Virtualization & Systems**
+
+* **Microsoft Windows 11 IoT Enterprise LTSC:** [Microsoft Evaluation Center - Download Windows 11 IoT Enterprise LTSC](https://www.microsoft.com/en-us/evalcenter/download-windows-11-iot-enterprise-ltsc-eval)
+* **Oracle VM VirtualBox:** [Oracle VirtualBox User Manual](https://www.virtualbox.org/wiki/Documentation)
+* **Ubuntu Server:** [Ubuntu Server Official Documentation](https://ubuntu.com/server/docs)
+* **LinkedIn:** [LinkedIn Help Center & Professional Guides](https://www.linkedin.com/help/linkedin)
