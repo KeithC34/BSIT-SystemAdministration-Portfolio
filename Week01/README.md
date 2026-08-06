@@ -29,7 +29,6 @@
 * **LinkedIn:** [https://www.linkedin.com/in/keith-francis-san-jose-b5a767427/](https://www.linkedin.com/in/keith-francis-san-jose-b5a767427/)
 
 ---
-
 # Installation Screenshots
 
 ### Professional Accounts
@@ -43,23 +42,22 @@
 
 ### Software Setup
 #### VS Code
-![VS Code Setup](screenshot/vscode.jpg)
+![VS Code Setup](screenshots/vscode.jpg)
 
 #### Git
-![Git Setup](screenshot/git.jpg)
+![Git Setup](screenshots/git.jpg)
 
 #### GitHub Desktop
-![GitHub Desktop Setup](screenshot/github_desktop.jpg)
+![GitHub Desktop Setup](screenshots/github_desktop.jpg)
 
 #### VirtualBox
-![VirtualBox Setup](screenshot/virtualbox.jpg)
+![VirtualBox Setup](screenshots/virtualbox.jpg)
 
 #### Ubuntu Linux
-![Ubuntu Setup](screenshot/ubuntu.jpg)
+![Ubuntu Setup](screenshots/ubuntu.jpg)
 
 #### Windows OS
-![Windows Setup](screenshot/windows.jpg)
-
+![Windows Setup](screenshots/windows.jpg)
 ---
 
 # Challenges Encountered
