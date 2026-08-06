@@ -74,12 +74,6 @@
 * **Problem:** Received normalization warnings regarding LF/CRLF text file line endings when tracking `.gitattributes` and `.gitkeep` files across environments.
 * **Solution:** Configured global Git line-ending settings (`git config --global core.autocrlf true`) to handle Windows/Linux carriage returns consistently.
 
-Here is the reference for the Windows 11 IoT Enterprise LTSC evaluation portal to add to your documentation list:
-
-* **Microsoft Windows 11 IoT Enterprise LTSC Evaluation:** [Microsoft Evaluation Center - Windows 11 IoT Enterprise LTSC](https://www.microsoft.com/en-us/evalcenter/download-windows-11-iot-enterprise-ltsc-eval)
-
----
-
 ### 🛠️ **Core Tools & Platforms**
 
 * **Git:** [Git Official Documentation](https://git-scm.com/docs)
