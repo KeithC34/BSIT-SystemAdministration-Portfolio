@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ABC Startup Solutions – Enterprise Infrastructure Plan</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="report.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">ABC Startup Solutions – Enterprise Infrastructure
+Plan</h1>
+</header>
+<h1 id="week-2--enterprise-infrastructure-planning">Week 2 – Enterprise
+Infrastructure Planning</h1>
+<blockquote>
+<p><strong>Student:</strong> Keith Francis C. San Jose<br />
+<strong>Course:</strong> ITEP 414 – System Administration and
+Maintenance<br />
+<strong>Scenario:</strong> ABC Startup Solutions (20 employees,
+single-floor office)<br />
+<strong>Date:</strong> August 12, 2026</p>
+</blockquote>
+<h2 id="project-overview">Project Overview</h2>
+<p>This project proposes a secure, manageable, and expandable IT
+infrastructure for <strong>ABC Startup Solutions</strong>, a new
+software development company with no existing computers, servers,
+network, internet service, or security policies. The plan translates the
+company's operational needs into hardware, software, network, security,
+backup, and staffing recommendations suitable for an initial 20-person
+deployment.</p>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li>Analyze business requirements before purchasing or deploying
+technology.</li>
+<li>Prepare traceable hardware, software, and network inventories.</li>
+<li>Design a segmented small-enterprise network topology.</li>
+<li>Explain how key system administration roles collaborate.</li>
+<li>Communicate technical recommendations through professional
+documentation.</li>
+</ul>
+<h2 id="company-scenario-and-profile">Company Scenario and Profile</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Company</td>
+<td>ABC Startup Solutions</td>
+</tr>
+<tr>
+<td>Nature of business</td>
+<td>Custom web, mobile, and cloud software development for small and
+medium enterprises</td>
+</tr>
+<tr>
+<td>Vision</td>
+<td>To become a trusted Philippine technology partner known for secure,
+practical, and people-centered digital solutions.</td>
+</tr>
+<tr>
+<td>Mission</td>
+<td>To build reliable software, support clients responsibly, and create
+an environment where employees can innovate securely and
+efficiently.</td>
+</tr>
+<tr>
+<td>Fictional office</td>
+<td>8/F One Innovation Center, Nuvali Business District, Santa Rosa,
+Laguna</td>
+</tr>
+<tr>
+<td>Work model</td>
+<td>Primarily office-based with controlled remote access for approved
+staff</td>
+</tr>
+</tbody>
+</table>
+<h3 id="organizational-structure">Organizational Structure</h3>
+<p>The Managing Director oversees four department leads. The <strong>IT
+Department (5)</strong> develops products and administers
+infrastructure; <strong>Human Resources (4)</strong> manages employee
+records and recruitment; <strong>Finance (5)</strong> handles
+accounting, payroll, and purchasing; and <strong>Sales (6)</strong>
+manages prospects, customers, and presentations. Total headcount is
+<strong>20</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Department</th>
+<th style="text-align: right;">Employees</th>
+<th>Primary technology need</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Information Technology</td>
+<td style="text-align: right;">5</td>
+<td>High-performance development workstations, server administration,
+test virtualization</td>
+</tr>
+<tr>
+<td>Human Resources</td>
+<td style="text-align: right;">4</td>
+<td>Secure document handling and reliable office productivity</td>
+</tr>
+<tr>
+<td>Finance</td>
+<td style="text-align: right;">5</td>
+<td>Restricted financial data, dependable printing, and protected
+backups</td>
+</tr>
+<tr>
+<td>Sales</td>
+<td style="text-align: right;">6</td>
+<td>Portable laptops, wireless access, presentations, and remote
+work</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>20</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="hardware-inventory">Hardware Inventory</h2>
+<table>
+<thead>
+<tr>
+<th>Asset ID</th>
+<th>Hardware / specification</th>
+<th style="text-align: right;">Qty.</th>
+<th>Assignment</th>
+<th>Purpose and justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HW-DT-001</td>
+<td>Business desktop, Core i5/Ryzen 5, 16 GB RAM, 512 GB NVMe</td>
+<td style="text-align: right;">14</td>
+<td>IT 5, HR 4, Finance 5</td>
+<td>Reliable fixed workstations; IT units may be upgraded to 32 GB for
+local virtual machines.</td>
+</tr>
+<tr>
+<td>HW-LT-001</td>
+<td>Business laptop, Core i5/Ryzen 5, 16 GB RAM, 512 GB SSD</td>
+<td style="text-align: right;">6</td>
+<td>Sales</td>
+<td>Mobility for presentations and approved remote work.</td>
+</tr>
+<tr>
+<td>HW-SV-001</td>
+<td>Tower server, Xeon E-class, 64 GB ECC RAM, RAID-capable storage,
+dual NIC, 3-year warranty</td>
+<td style="text-align: right;">1</td>
+<td>Server room</td>
+<td>Hosts directory, DNS/DHCP, file, logging, and internal application
+services using virtual machines.</td>
+</tr>
+<tr>
+<td>HW-RT-001</td>
+<td>Dual-WAN gigabit router</td>
+<td style="text-align: right;">1</td>
+<td>Server room</td>
+<td>Routes internal networks and supports a future backup ISP.</td>
+</tr>
+<tr>
+<td>HW-SW-001</td>
+<td>48-port managed PoE+ switch</td>
+<td style="text-align: right;">1</td>
+<td>Server room</td>
+<td>Provides enough ports, VLAN support, and growth capacity while
+powering access points.</td>
+</tr>
+<tr>
+<td>HW-PR-001</td>
+<td>Network multifunction laser printer</td>
+<td style="text-align: right;">2</td>
+<td>HR/Finance shared; general office</td>
+<td>Separates sensitive administrative printing from general workloads
+and provides scanning.</td>
+</tr>
+<tr>
+<td>HW-UPS-001</td>
+<td>2200 VA line-interactive UPS with network management</td>
+<td style="text-align: right;">1</td>
+<td>Server/network rack</td>
+<td>Provides safe shutdown and short-term power continuity for core
+equipment.</td>
+</tr>
+<tr>
+<td>HW-UPS-002</td>
+<td>1000 VA UPS</td>
+<td style="text-align: right;">2</td>
+<td>HR/Finance printer areas</td>
+<td>Protects critical shared equipment from unstable power.</td>
+</tr>
+<tr>
+<td>HW-AP-001</td>
+<td>Wi-Fi 6 business access point</td>
+<td style="text-align: right;">2</td>
+<td>Office ceiling</td>
+<td>Provides balanced coverage and separate corporate/guest SSIDs.</td>
+</tr>
+<tr>
+<td>HW-NAS-001</td>
+<td>4-bay NAS, four 8 TB NAS drives, RAID 6</td>
+<td style="text-align: right;">1</td>
+<td>Server room</td>
+<td>Central backup target with disk-failure tolerance; RAID is not
+treated as a backup.</td>
+</tr>
+<tr>
+<td>HW-BK-001</td>
+<td>16 TB encrypted external drive</td>
+<td style="text-align: right;">2</td>
+<td>Rotated on/off site</td>
+<td>Supports alternating offline backups and recovery from ransomware or
+NAS failure.</td>
+</tr>
+<tr>
+<td>HW-MN-001</td>
+<td>24-inch IPS monitor</td>
+<td style="text-align: right;">26</td>
+<td>20 primary; second display for IT 5; 1 spare</td>
+<td>Improves productivity and provides one replacement spare.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="software-inventory">Software Inventory</h2>
+<p>Versions should be validated again during procurement so supported
+releases are deployed.</p>
+<table>
+<thead>
+<tr>
+<th>Software</th>
+<th>Version / edition</th>
+<th>License</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows 11 Pro</td>
+<td>Current supported release</td>
+<td>Commercial/OEM, 20 devices</td>
+<td>Business endpoint OS with BitLocker, domain join, and policy
+management.</td>
+</tr>
+<tr>
+<td>Ubuntu Server LTS</td>
+<td>24.04 LTS or supported successor</td>
+<td>Open source</td>
+<td>Stable server platform for internal services, containers, and
+automation.</td>
+</tr>
+<tr>
+<td>Microsoft 365 Business Premium</td>
+<td>Current cloud service</td>
+<td>Subscription, 20 users</td>
+<td>Office applications, email, collaboration, identity, device
+management, and endpoint protection.</td>
+</tr>
+<tr>
+<td>Visual Studio Code</td>
+<td>Current stable</td>
+<td>Free</td>
+<td>Primary editor for development, scripting, and configuration
+files.</td>
+</tr>
+<tr>
+<td>Git</td>
+<td>Current stable</td>
+<td>GPLv2</td>
+<td>Distributed source control and auditable change history.</td>
+</tr>
+<tr>
+<td>GitHub Desktop</td>
+<td>Current stable</td>
+<td>Free</td>
+<td>Accessible graphical Git workflow for staff who need it.</td>
+</tr>
+<tr>
+<td>Oracle VirtualBox</td>
+<td>Current supported release</td>
+<td>GPLv3 / extension terms reviewed</td>
+<td>Local test virtual machines; licensing is reviewed before commercial
+extension-pack use.</td>
+</tr>
+<tr>
+<td>Google Chrome Enterprise</td>
+<td>Current stable</td>
+<td>Free</td>
+<td>Standards-compatible browser with centralized policy support.</td>
+</tr>
+<tr>
+<td>Microsoft Defender for Business</td>
+<td>Current service</td>
+<td>Included with selected Microsoft 365 plan</td>
+<td>Endpoint detection, antivirus, vulnerability management, and
+centralized response.</td>
+</tr>
+<tr>
+<td>AnyDesk</td>
+<td>Current business release</td>
+<td>Commercial subscription</td>
+<td>Approved attended remote support; access is restricted, logged, and
+protected by MFA.</td>
+</tr>
+<tr>
+<td>7-Zip</td>
+<td>Current stable</td>
+<td>LGPL/BSD</td>
+<td>Secure handling of common archive formats.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="network-inventory">Network Inventory</h2>
+<table>
+<thead>
+<tr>
+<th>Asset ID</th>
+<th>Network component</th>
+<th style="text-align: right;">Qty.</th>
+<th>Key requirement</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NET-MD-001</td>
+<td>ISP optical network terminal/modem</td>
+<td style="text-align: right;">1</td>
+<td>ISP-managed bridge/pass-through mode</td>
+<td>Terminates the business fiber service.</td>
+</tr>
+<tr>
+<td>NET-RT-001</td>
+<td>Dual-WAN router</td>
+<td style="text-align: right;">1</td>
+<td>Gigabit throughput, VPN, QoS</td>
+<td>WAN routing and future secondary-ISP failover.</td>
+</tr>
+<tr>
+<td>NET-FW-001</td>
+<td>Next-generation firewall appliance</td>
+<td style="text-align: right;">1</td>
+<td>VLANs, IPS, application control, VPN, web filtering</td>
+<td>Enforces policy between the internet and internal VLANs.</td>
+</tr>
+<tr>
+<td>NET-SW-001</td>
+<td>48-port managed PoE+ switch</td>
+<td style="text-align: right;">1</td>
+<td>802.1Q VLAN, STP, LACP, SNMP</td>
+<td>Connects wired endpoints and powers access points with room for
+growth.</td>
+</tr>
+<tr>
+<td>NET-AP-001</td>
+<td>Wi-Fi 6 access point</td>
+<td style="text-align: right;">2</td>
+<td>WPA3, multiple SSIDs, VLAN tagging</td>
+<td>Provides corporate and isolated guest wireless coverage.</td>
+</tr>
+<tr>
+<td>NET-PP-001</td>
+<td>48-port CAT6 patch panel</td>
+<td style="text-align: right;">1</td>
+<td>Rack-mounted and labeled</td>
+<td>Organizes permanent cabling and simplifies troubleshooting.</td>
+</tr>
+<tr>
+<td>NET-CB-001</td>
+<td>CAT6 solid-core cable</td>
+<td style="text-align: right;">2 × 305 m boxes</td>
+<td>Certified gigabit runs</td>
+<td>Supports structured cabling for all desks, APs, printers, and spare
+outlets.</td>
+</tr>
+<tr>
+<td>NET-RJ-001</td>
+<td>CAT6 RJ45 keystone/connectors</td>
+<td style="text-align: right;">60</td>
+<td>Standards-compliant, tested</td>
+<td>Terminates planned drops plus spares; permanent links use keystone
+jacks.</td>
+</tr>
+<tr>
+<td>NET-RK-001</td>
+<td>Lockable 18U rack and cable management</td>
+<td style="text-align: right;">1</td>
+<td>Grounded, ventilated</td>
+<td>Protects and organizes the patch panel, firewall, switch, and
+UPS.</td>
+</tr>
+<tr>
+<td>NET-TL-001</td>
+<td>Cable tester and labeling kit</td>
+<td style="text-align: right;">1 set</td>
+<td>Wiremap and length testing</td>
+<td>Verifies every run and supports accurate documentation.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="enterprise-network-diagram">Enterprise Network Diagram</h2>
+<p><img src="diagrams/EnterpriseNetworkDiagram.png"
+alt="ABC Startup Solutions enterprise network topology" /></p>
+<p><a href="diagrams/EnterpriseNetworkDiagram.pdf">Open the PDF
+diagram</a> · <a href="diagrams/EnterpriseNetworkDiagram.svg">Open the
+editable SVG source</a></p>
+<p>The firewall terminates remote-access VPN and routes six VLANs: IT
+(10), HR (20), Finance (30), Sales (40), Servers (50), and Guest (60).
+Access-control rules deny direct guest access to internal resources,
+restrict HR and Finance data to authorized users, and expose server
+services only as required. Management interfaces are limited to the IT
+VLAN. This logical segmentation reduces lateral movement while retaining
+a simple single-switch design appropriate for 20 employees.</p>
+<h2 id="system-administration-roles">System Administration Roles</h2>
+<h3 id="helpdesk-technician">Helpdesk Technician</h3>
+<p>The helpdesk technician receives, prioritizes, documents, and
+resolves user incidents; provisions approved accounts and devices;
+supports operating systems and office applications; and escalates
+recurring or high-impact problems. Important skills include patient
+communication, structured troubleshooting, ticket documentation, Active
+Directory/Entra ID fundamentals, and safe remote support. Common tools
+include ticketing systems, remote-assistance software, knowledge bases,
+endpoint-management portals, and hardware diagnostics. Useful entry
+certifications include <strong>CompTIA A+</strong>, <strong>ITIL 4
+Foundation</strong>, and <strong>Microsoft 365
+Fundamentals</strong>.</p>
+<h3 id="network-administrator">Network Administrator</h3>
+<p>The network administrator designs and maintains switching, routing,
+VLANs, Wi-Fi, VPN, addressing, monitoring, and network security
+controls. The role requires TCP/IP, DNS, DHCP, subnetting,
+firewall-policy, packet-analysis, and structured-cabling skills. Typical
+tools include switch/firewall consoles, Wireshark, Nmap, PuTTY/SSH,
+configuration backups, and SNMP monitoring. Relevant certifications
+include <strong>Cisco CCNA</strong>, <strong>CompTIA Network+</strong>,
+and vendor firewall certifications.</p>
+<h3 id="linux-system-administrator">Linux System Administrator</h3>
+<p>The Linux administrator installs, hardens, patches, monitors, backs
+up, and automates Ubuntu services and virtual machines. Essential skills
+include the shell, permissions, systemd, storage, networking, logs, SSH,
+scripting, configuration management, and recovery. Common tools include
+Bash, OpenSSH, journalctl, Ansible, Git, rsync, cron/systemd timers, and
+monitoring platforms. Relevant certifications include <strong>Linux
+Professional Institute LPIC-1</strong>, <strong>CompTIA Linux+</strong>,
+and <strong>Red Hat RHCSA</strong>.</p>
+<h3 id="cloud-administrator">Cloud Administrator</h3>
+<p>The cloud administrator manages cloud identities, subscriptions,
+workloads, storage, networking, budgets, monitoring, and recovery while
+applying least privilege and governance. The role needs IAM, virtual
+networking, automation, cost-control, security, and incident-response
+skills. Common tools include Microsoft Entra and Azure portals, Azure
+CLI/PowerShell, Terraform, cloud monitoring, and Microsoft 365
+administration. Relevant certifications include <strong>Microsoft Azure
+Administrator Associate</strong>, <strong>AWS Certified SysOps
+Administrator – Associate</strong>, and entry cloud fundamentals
+credentials.</p>
+<h3 id="how-the-roles-collaborate">How the roles collaborate</h3>
+<p>The helpdesk provides the first view of user impact and records
+repeatable evidence; network and Linux administrators investigate
+infrastructure paths and server services; and the cloud administrator
+checks identity, hosted services, and cloud controls. They coordinate
+through one ticket and change-management process, share monitoring
+alerts and documentation, test changes before deployment, and jointly
+review incidents. Clear ownership and escalation allow the team to
+restore service quickly without bypassing security or creating
+conflicting fixes.</p>
+<h2 id="infrastructure-recommendations">Infrastructure
+Recommendations</h2>
+<h3 id="internet-provider">Internet provider</h3>
+<p>Procure a <strong>business-grade fiber plan with at least 500 Mbps
+symmetric bandwidth</strong>, a static public IP, service-level support,
+and bridge/pass-through capability. Select the provider only after
+checking serviceability and written SLA terms at the fictional site. Add
+a second provider or 5G business connection when operations depend on
+continuous client access; dual-WAN failover avoids a single carrier
+failure.</p>
+<h3 id="server-and-platform">Server and platform</h3>
+<p>Use one warrantied tower server with a recent Xeon E-class processor,
+<strong>64 GB ECC RAM</strong>, hardware-supported RAID, mirrored SSDs
+for the hypervisor, and redundant-capacity storage for workloads.
+Virtualize directory/DNS, file, monitoring/logging, and internal
+application services, but keep resource reservations and documented
+recovery procedures. The recommended specification supports current
+services and moderate growth without buying data-center-scale
+hardware.</p>
+<h3 id="backup-strategy">Backup strategy</h3>
+<p>Apply the <strong>3-2-1 rule</strong>: production data plus backups
+on the NAS and an encrypted off-site/cloud or rotated offline drive. Run
+daily incremental and weekly full backups, retain monthly recovery
+points, encrypt backup media, limit backup-administrator access, and
+automate failure alerts. Test a file restore monthly and a complete
+service recovery quarterly. Snapshots and RAID improve availability but
+do not replace independent backups.</p>
+<h3 id="security-antivirus-and-passwords">Security, antivirus, and
+passwords</h3>
+<ul>
+<li>Enforce least privilege, separate administrator accounts, MFA for
+email, VPN, cloud, and privileged access, and rapid removal of
+leavers.</li>
+<li>Segment departments and guests with VLANs and default-deny
+inter-VLAN firewall rules; allow only documented business services.</li>
+<li>Enable BitLocker, Secure Boot, automatic screen lock, centralized
+patching, Defender for Business, email filtering, and tested
+incident-response procedures.</li>
+<li>Maintain asset, account, network, backup, vendor, and change
+records; review alerts and firewall rules on a schedule.</li>
+<li>Require passphrases of <strong>at least 14 characters</strong>,
+block common/compromised passwords, avoid routine forced changes unless
+compromise is suspected, and use an approved password manager. MFA is
+mandatory for high-risk access.</li>
+</ul>
+<h3 id="expansion-plan">Expansion plan</h3>
+<p>The 48-port switch, structured cabling spares, two scalable APs,
+modular server memory/storage, and dual-WAN router provide headroom
+toward approximately 35–40 staff. Review utilization quarterly. Before
+exceeding switch, wireless, or server thresholds, add a stacked/access
+switch, perform a wireless survey, expand compute or migrate appropriate
+services to the cloud, and update diagrams and inventories through
+change control.</p>
+<h2 id="technologies-used">Technologies Used</h2>
+<ul>
+<li>Markdown and Git/GitHub for versioned documentation</li>
+<li>SVG for an editable network diagram, exported to PNG and PDF</li>
+<li>Windows 11 Pro, Ubuntu Server, Microsoft 365, Git, and VS Code in
+the proposed stack</li>
+<li>VLANs, WPA3, VPN, next-generation firewalling, centralized endpoint
+security, and 3-2-1 backups</li>
+</ul>
+<h2 id="challenges-encountered">Challenges Encountered</h2>
+<p>The main design challenge was balancing startup cost with security
+and future growth. A single managed PoE switch and one virtualization
+server keep the first deployment understandable, while VLAN separation,
+backup media, spare ports, and modular capacity avoid an unsafe or
+immediately obsolete design. A second challenge was separating products
+that overlap—router, firewall, NAS, RAID, snapshots, and backups—so that
+each recommendation has a clear function and no single control is
+mistaken for complete protection.</p>
+<h2 id="personal-reflection">Personal Reflection</h2>
+<p>This project taught me that system administration begins long before
+installing an operating system or connecting a cable. I learned to start
+with the organization: its employees, departments, data, daily work,
+risks, and expected growth. Those requirements then guide every
+technical choice. Preparing inventories also showed me that an equipment
+list becomes more useful when every item has an owner, quantity,
+purpose, and justification. I now understand why documentation must be
+clear enough for another administrator or manager to review and continue
+the work.</p>
+<p>The most challenging task was designing the network topology. I had
+to connect the internet, router, firewall, switch, access points,
+server, printers, and four departments without making the design
+unnecessarily complex. VLANs helped solve this problem because they
+allow one managed switching environment to separate IT, HR, Finance,
+Sales, servers, and guests logically. I also had to consider which
+connections should be permitted. For example, guests should reach the
+internet but not internal systems, while management interfaces should
+only be available to authorized IT staff.</p>
+<p>Planning is important before deployment because early decisions
+affect security, cost, reliability, and future maintenance. Purchasing
+hardware without checking capacity could create waste or force an early
+replacement. Deploying a flat network could expose sensitive HR and
+Finance information. Treating RAID as a complete backup could leave the
+company unprepared for deletion, ransomware, or site loss. A written
+plan gives management an opportunity to verify assumptions, compare
+priorities, and approve controls before changes become expensive.</p>
+<p>This activity will help me become a better System Administrator
+because it trained me to connect technical knowledge with business
+needs. Instead of choosing a product only because it is powerful or
+familiar, I must explain what problem it solves, how it will be secured,
+who will maintain it, and how it can be recovered. I also practiced
+presenting infrastructure in inventories, diagrams, recommendations, and
+professional Markdown. In future projects, I will use the same
+requirements-first approach and keep documentation updated as the
+environment changes.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a
+href="https://www.cisa.gov/audiences/small-and-medium-businesses">CISA
+Cyber Guidance for Small Businesses</a></li>
+<li><a href="https://www.nist.gov/itl/smallbusinesscyber">NIST Small
+Business Cybersecurity Corner</a></li>
+<li><a href="https://pages.nist.gov/800-63-4/sp800-63b.html">NIST
+Digital Identity Guidelines: Authentication and Lifecycle
+Management</a></li>
+<li><a href="https://learn.microsoft.com/defender-business/">Microsoft
+Defender for Business documentation</a></li>
+<li><a
+href="https://learn.microsoft.com/microsoft-365/admin/misc/password-policy-recommendations">Microsoft
+password policy recommendations</a></li>
+<li><a href="https://documentation.ubuntu.com/server/">Ubuntu Server
+documentation</a></li>
+<li><a
+href="https://www.cisco.com/c/en/us/products/switches/what-is-a-vlan.html">Cisco:
+What Is a VLAN?</a></li>
+<li><a
+href="https://www.cisa.gov/secure-our-world/back-up-business-data">CISA:
+Back Up Business Data</a></li>
+</ul>
+<p>See <a href="references/README.md">references/README.md</a> for
+source-use notes. Certification names and requirements can change, so
+official vendor pages should be checked before pursuing an exam.</p>
+<h2 id="deliverables">Deliverables</h2>
+<ul>
+<li><a href="EnterpriseInfrastructurePlan.pdf">Enterprise Infrastructure
+Plan (PDF)</a></li>
+<li><a href="diagrams/EnterpriseNetworkDiagram.png">Network Diagram
+(PNG)</a></li>
+<li><a href="diagrams/EnterpriseNetworkDiagram.pdf">Network Diagram
+(PDF)</a></li>
+<li><a href="LinkedInPost.md">LinkedIn Post Draft</a></li>
+</ul>
+</body>
+</html>
