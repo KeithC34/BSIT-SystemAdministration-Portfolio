@@ -94,8 +94,6 @@ Versions should be validated again during procurement so supported releases are 
 
 ![ABC Startup Solutions enterprise network topology](diagrams/EnterpriseNetworkDiagram.png)
 
-[Open the PDF diagram](diagrams/EnterpriseNetworkDiagram.pdf) · [Open the editable SVG source](diagrams/EnterpriseNetworkDiagram.svg)
-
 The firewall terminates remote-access VPN and routes six VLANs: IT (10), HR (20), Finance (30), Sales (40), Servers (50), and Guest (60). Access-control rules deny direct guest access to internal resources, restrict HR and Finance data to authorized users, and expose server services only as required. Management interfaces are limited to the IT VLAN. This logical segmentation reduces lateral movement while retaining a simple single-switch design appropriate for 20 employees.
 
 ## System Administration Roles
@@ -149,7 +147,7 @@ The 48-port switch, structured cabling spares, two scalable APs, modular server 
 ## Technologies Used
 
 - Markdown and Git/GitHub for versioned documentation
-- SVG for an editable network diagram, exported to PNG and PDF
+- PNG for the final network diagram
 - Windows 11 Pro, Ubuntu Server, Microsoft 365, Git, and VS Code in the proposed stack
 - VLANs, WPA3, VPN, next-generation firewalling, centralized endpoint security, and 3-2-1 backups
 
@@ -184,5 +182,4 @@ See [references/README.md](references/README.md) for source-use notes. Certifica
 
 - [Enterprise Infrastructure Plan (PDF)](EnterpriseInfrastructurePlan.pdf)
 - [Network Diagram (PNG)](diagrams/EnterpriseNetworkDiagram.png)
-- [Network Diagram (PDF)](diagrams/EnterpriseNetworkDiagram.pdf)
 - [LinkedIn Post Draft](LinkedInPost.md)
